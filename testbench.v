@@ -1,5 +1,4 @@
 module D_flip_flop_tb;
-
 reg D;
 reg clk;
 reg rst;
@@ -18,11 +17,9 @@ initial begin
     forever #5 clk = ~clk;
 end
 
-
 initial begin
     $monitor("Time=%0t | clk=%b | rst=%b | D=%b | Q=%b",
               $time, clk, rst, D, Q);
-
 
     rst = 1;
     D   = 0;
